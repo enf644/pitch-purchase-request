@@ -559,7 +559,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 3c01dc4c-feb3-49c7-bfb1-1a0ea7e8fa69
 AxRoleFieldPermission:
