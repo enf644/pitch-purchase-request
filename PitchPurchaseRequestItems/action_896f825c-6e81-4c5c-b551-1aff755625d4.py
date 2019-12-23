@@ -1,0 +1,1 @@
+ax.row.itemAmount = float(ax.row.quantity) * float(ax.row.indicativePrice)

@@ -1,0 +1,211 @@
+AxForm:
+  guid: 356b474b-bebf-4618-b5a4-e94d1734a3d2
+  name: Catalog items
+  db_name: PitchPurchaseRequestItems
+  parent: beba2736-b150-484a-a657-7767bb1a3fbe
+  position: 0
+  tom_label: '{{item}}'
+  icon: shopping-bag
+AxFields:
+- guid: 74f56e41-393f-4193-9844-75246fe88165
+  name: Default tab
+  db_name:
+  position: 0
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: 842a20a0-869f-4176-a2aa-c07d95a9509e
+  name: Registration number
+  db_name: regNum
+  position: 0
+  options_json: '{"comparator":"string"}'
+  private_options_json: '{"algorithm":"# first value of counter\nif not ax.counter:\n    ax.counter=1\n#
+    ax.value will be registration number\nax.value=f\"{ax.counter}\"\n# Increment
+    counter\nax.counter=str(int(ax.counter) + 1)","counterKey":"356b474b-bebf-4618-b5a4-e94d1734a3d2"}'
+  field_type_tag: AxNum
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: 74f56e41-393f-4193-9844-75246fe88165
+- guid: 6c1b8cad-cd5f-4c53-b3d2-4ab94e4b292c
+  name: Item
+  db_name: item
+  position: 1
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxString
+  is_tab: false
+  is_required: true
+  is_whole_row: false
+  parent: 74f56e41-393f-4193-9844-75246fe88165
+- guid: 395445b0-4bd6-4caf-9491-81a43f4fcefa
+  name: Quantity
+  db_name: quantity
+  position: 2
+  options_json: '{"decimalCharacter":",","decimalPlaces":2,"digitGroupSeparator":"
+    ","wheelStep":1,"minimumValue":0}'
+  private_options_json:
+  field_type_tag: AxDecimal
+  is_tab: false
+  is_required: true
+  is_whole_row: false
+  parent: 74f56e41-393f-4193-9844-75246fe88165
+- guid: ea48dae8-2113-4fe0-b962-4196547e4659
+  name: Indicative price
+  db_name: indicativePrice
+  position: 3
+  options_json: '{"decimalCharacter":",","decimalPlaces":2,"digitGroupSeparator":"
+    ","wheelStep":1,"minimumValue":0,"currencySymbol":"$"}'
+  private_options_json:
+  field_type_tag: AxDecimal
+  is_tab: false
+  is_required: true
+  is_whole_row: false
+  parent: 74f56e41-393f-4193-9844-75246fe88165
+- guid: 4117e772-d43b-4013-92db-c51f24f9d07b
+  name: Reason for purchase
+  db_name: reason
+  position: 4
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxText
+  is_tab: false
+  is_required: true
+  is_whole_row: true
+  parent: 74f56e41-393f-4193-9844-75246fe88165
+- guid: 38eafb75-60d1-4eba-82db-4171eaaf50db
+  name: Item amount
+  db_name: itemAmount
+  position: 5
+  options_json: '{"decimalCharacter":",","decimalPlaces":2,"digitGroupSeparator":"
+    ","wheelStep":1,"minimumValue":0,"currencySymbol":"$"}'
+  private_options_json:
+  field_type_tag: AxDecimal
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: 74f56e41-393f-4193-9844-75246fe88165
+AxMetrics:
+- guid: 36d979a0-0078-48c8-87a0-a0279fa50296
+  key: 356b474b-bebf-4618-b5a4-e94d1734a3d2
+  value: '15'
+AxGrids:
+- guid: b4a5f069-02a1-4165-953e-700b2866dcbc
+  name: Default grid
+  db_name: Default
+  position: 1
+  options_json: '{"enableQuickSearch":false,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":true,"rowHeight":45,"pinned":0,"widths":{"item":245,"indicativePrice":107,"quantity":122,"reason":235},"filterModel":{},"sortModel":[],"enableTitle":true}'
+  is_default_view: true
+  columns:
+  - guid: b7c97ca1-ff3b-4a57-9ab9-b13bedcf600f
+    position: 0
+    options_json:
+    field_guid: 6c1b8cad-cd5f-4c53-b3d2-4ab94e4b292c
+    column_type: columns
+    aggregation_type:
+  - guid: 8b7ccdcc-7945-44fe-8707-32fb3257b5a1
+    position: 1
+    options_json:
+    field_guid: ea48dae8-2113-4fe0-b962-4196547e4659
+    column_type: columns
+    aggregation_type:
+  - guid: 038ee929-0834-4b95-9c39-47a0dd40ac68
+    position: 2
+    options_json:
+    field_guid: 395445b0-4bd6-4caf-9491-81a43f4fcefa
+    column_type: columns
+    aggregation_type:
+  - guid: 538c30d4-2d0d-4c13-ad99-19185cffd313
+    position: 4
+    options_json:
+    field_guid: 38eafb75-60d1-4eba-82db-4171eaaf50db
+    column_type: columns
+    aggregation_type:
+AxRoles:
+- guid: dffb031d-a41d-4243-9cdc-dc49eead1115
+  name: All users
+  icon:
+  is_dynamic: false
+AxStates:
+- guid: e4754ba6-b1f6-44cf-be9f-cfe14eb23e27
+  name: Start
+  is_start: true
+  is_deleted: false
+  is_all: false
+  x: 0.0
+  y: -200.0
+  roles:
+  - dffb031d-a41d-4243-9cdc-dc49eead1115
+- guid: f7f948f8-2a71-4c77-a1a3-d6ae5fa86d23
+  name: Created
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: 0.0
+  y: 1.0
+  roles:
+  - dffb031d-a41d-4243-9cdc-dc49eead1115
+- guid: 3cb3a5d5-5896-4503-83b8-aa115204d1be
+  name: Deleted
+  is_start: false
+  is_deleted: true
+  is_all: false
+  x: 0.0
+  y: 200.0
+  roles: []
+- guid: 6fe49a48-d23b-43d0-88b6-943ce18e8a91
+  name: All
+  is_start: false
+  is_deleted: false
+  is_all: true
+  x: 300.0
+  y: 20.0
+  roles: []
+AxActions:
+- guid: 896f825c-6e81-4c5c-b551-1aff755625d4
+  name: Add record
+  db_name:
+  from_state_guid: e4754ba6-b1f6-44cf-be9f-cfe14eb23e27
+  to_state_guid: f7f948f8-2a71-4c77-a1a3-d6ae5fa86d23
+  confirm_text:
+  close_modal: true
+  icon:
+  radius: 0.0
+  roles:
+  - dffb031d-a41d-4243-9cdc-dc49eead1115
+- guid: ccb56f4e-fe73-44a1-9245-e287a1282d28
+  name: Update
+  db_name:
+  from_state_guid: f7f948f8-2a71-4c77-a1a3-d6ae5fa86d23
+  to_state_guid: f7f948f8-2a71-4c77-a1a3-d6ae5fa86d23
+  confirm_text:
+  close_modal: true
+  icon:
+  radius: 0.0
+  roles:
+  - dffb031d-a41d-4243-9cdc-dc49eead1115
+- guid: d1601ec4-b1b4-40f9-af78-b19961d284ae
+  name: Delete record
+  db_name:
+  from_state_guid: f7f948f8-2a71-4c77-a1a3-d6ae5fa86d23
+  to_state_guid: 3cb3a5d5-5896-4503-83b8-aa115204d1be
+  confirm_text: Are you sure you want to delete record?
+  close_modal: true
+  icon:
+  radius: 0.0
+  roles: []
+AxRoleFieldPermission:
+- role_guid: dffb031d-a41d-4243-9cdc-dc49eead1115
+  state_guid: f7f948f8-2a71-4c77-a1a3-d6ae5fa86d23
+  field_guid: None
+  read: true
+  edit: true
+- role_guid: dffb031d-a41d-4243-9cdc-dc49eead1115
+  state_guid: e4754ba6-b1f6-44cf-be9f-cfe14eb23e27
+  field_guid: None
+  read: true
+  edit: true
