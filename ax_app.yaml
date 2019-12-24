@@ -14,7 +14,7 @@ Pages:
   name: Pitch Purchase Request
   db_name: PitchPurchaseRequest
   position: 0
-  parent: c2f48a30-b866-4e84-97a8-8694efd164d0
+  parent: 7ac81f1f-6168-4576-827f-37b5be6e32d8
 - guid: 22194b46-72fa-4dc9-83cf-fbd062381c7b
   name: My requests
   db_name:
