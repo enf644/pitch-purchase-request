@@ -2,8 +2,8 @@ AxForm:
   guid: 356b474b-bebf-4618-b5a4-e94d1734a3d2
   name: Catalog items
   db_name: PitchPurchaseRequestItems
-  parent: beba2736-b150-484a-a657-7767bb1a3fbe
-  position: 0
+  parent: b833ce15-c7f7-413e-b7e0-40b8e7750a43
+  position: 1
   tom_label: '{{item}}'
   icon: shopping-bag
 AxFields:
@@ -92,7 +92,7 @@ AxFields:
 AxMetrics:
 - guid: 36d979a0-0078-48c8-87a0-a0279fa50296
   key: 356b474b-bebf-4618-b5a4-e94d1734a3d2
-  value: '15'
+  value: '18'
 AxGrids:
 - guid: b4a5f069-02a1-4165-953e-700b2866dcbc
   name: Default grid
@@ -117,12 +117,6 @@ AxGrids:
     position: 2
     options_json:
     field_guid: 395445b0-4bd6-4caf-9491-81a43f4fcefa
-    column_type: columns
-    aggregation_type:
-  - guid: 538c30d4-2d0d-4c13-ad99-19185cffd313
-    position: 4
-    options_json:
-    field_guid: 38eafb75-60d1-4eba-82db-4171eaaf50db
     column_type: columns
     aggregation_type:
 AxRoles:
